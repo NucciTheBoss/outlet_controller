@@ -161,7 +161,7 @@ def allOff():
 # When executing the program
 if __name__ == '__main__':
     try:
-        app.run(host='0.0.0.0', port='5000', debug=True)
+        app.run(host='0.0.0.0', port=5000, debug=True)
 
     except KeyboardInterrupt:
         os.system("sudo fuser -k 5000/tcp")
