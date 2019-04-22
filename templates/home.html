@@ -1,7 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Outlet Controller v1">
+    <meta name="application-name" content="outlet_controller.py">
+    <meta name="author" content="Jason C. Nucciarone">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+
+    <!-- w3.css will be main style for buttons, will use seperate code for body tag -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel = "stylesheet" type = "text/css" href = "{{ url_for('static',filename='styles/page_style.css') }}">
 </head>
 <body>
+    <div class = "w3-display-topmiddle" id = "main">
+        <div class = "w3-bar-block">
+            <!-- Current button names are pretty basic,
+                 but I am open to changing them later -->
+            <a class = "w3-button w3-round w3-xlarge
+                        w3-red w3-bar-item w3-margin w3-center" href = "/outlet1">
+            Outlet One</a>
+
+            <a class = "w3-button w3-round w3-xlarge
+                        w3-red w3-bar-item w3-margin w3-center" href = "/outlet2">
+            Outlet Two</a>
+
+            <a class = "w3-button w3-round w3-xlarge
+                        w3-red w3-bar-item w3-margin w3-center" href = "/outet3">
+            Outlet Three</a>
+
+            <a class = "w3-button w3-round w3-xlarge
+                        w3-red w3-bar-item w3-margin w3-center" href = "/outlet4">
+            Outlet Four</a>
+
+            <a class = "w3-button w3-round w3-xlarge
+                        w3-red w3-bar-item w3-margin w3-center" href = "/outlet5">
+            Outlet Five</a>
+
+            <a class = "w3-button w3-round w3-xlarge
+                        w3-red w3-bar-item w3-margin w3-center" href = "/outlet6">
+            Outlet Six</a>
+
+            <a class = "w3-button w3-round w3-xlarge
+                        w3-red w3-bar-item w3-margin w3-center" href = "/outlet7">
+            Outlet Seven</a>
+
+            <a class = "w3-button w3-round w3-xlarge
+                        w3-red w3-bar-item w3-margin w3-center" href = "/outlet8">
+            Outlet Eight</a>
+
+            <a class = "w3-button w3-round w3-xlarge
+                        w3-red w3-bar-item w3-margin w3-center" href = "/all_off">
+            All Off</a>
+        </div>
+    </div>
 </body>
 </html>
