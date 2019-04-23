@@ -57,103 +57,111 @@ def outlet1():
     if switch_closed[0] is False:
         gp.output(pinList[0], gp.LOW)
         switch_closed[0] = True
+        return render_template("home.html")
 
     if switch_closed[0] is True:
         gp.output(pinList[0], gp.HIGH)
         switch_closed[0] = False
+        return render_template("home.html")
 
-    return render_template("home.html")
 
 @app.route("/outlet2")
 def outlet2():
     if switch_closed[1] is False:
         gp.output(pinList[1], gp.LOW)
         switch_closed[1] = True
+        return render_template("home.html")
 
     if switch_closed[1] is True:
         gp.output(pinList[1], gp.HIGH)
         switch_closed[1] = False
+        return render_template("home.html")
 
-    return render_template("home.html")
 
 @app.route("/outlet3")
 def outlet3():
     if switch_closed[2] is False:
         gp.output(pinList[2], gp.LOW)
         switch_closed[2] = True
+        return render_template("home.html")
 
     if switch_closed[2] is True:
         gp.output(pinList[2], gp.HIGH)
         switch_closed[2] = False
+        return render_template("home.html")
 
-    return render_template("home.html")
 
 @app.route("/outlet4")
 def outlet4():
     if switch_closed[3] is False:
         gp.output(pinList[3], gp.LOW)
         switch_closed[3] = True
+        return render_template("home.html")
 
     if switch_closed[3] is True:
         gp.output(pinList[3], gp.HIGH)
         switch_closed[3] = False
+        return render_template("home.html")
 
-    return render_template("home.html")
 
 @app.route("/outlet5")
 def outlet5():
     if switch_closed[4] is False:
         gp.output(pinList[4], gp.LOW)
         switch_closed[4] = True
+        return render_template("home.html")
 
     if switch_closed[4] is True:
         gp.output(pinList[4], gp.HIGH)
         switch_closed[4] = False
+        return render_template("home.html")
 
-    return render_template("home.html")
 
 @app.route("/outlet6")
 def outlet6():
     if switch_closed[5] is False:
         gp.output(pinList[5], gp.LOW)
         switch_closed[5] = True
+        return render_template("home.html")
 
     if switch_closed[5] is True:
         gp.output(pinList[5], gp.HIGH)
         switch_closed[5] = False
+        return render_template("home.html")
 
-    return render_template("home.html")
 
 @app.route("/outlet7")
 def outlet7():
     if switch_closed[6] is False:
         gp.output(pinList[6], gp.LOW)
         switch_closed[6] = True
+        return render_template("home.html")
 
     if switch_closed[6] is True:
         gp.output(pinList[6], gp.HIGH)
         switch_closed[6] = False
+        return render_template("home.html")
 
-    return render_template("home.html")
 
 @app.route("/outlet8")
 def outlet8():
     if switch_closed[7] is False:
         gp.output(pinList[7], gp.LOW)
         switch_closed[7] = True
+        return render_template("home.html")
 
     if switch_closed[7] is True:
         gp.output(pinList[7], gp.HIGH)
         switch_closed[7] = False
-
-    return render_template("home.html")
+        return render_template("home.html")
 
 @app.route("/all_off")
 def allOff():
-    for pin in pinList:
+    # pin and switch are iterables starting at 0
+    for pin in range(len(pinList)):
         gp.output(pinList[pin], gp.HIGH)  # Open all relays
 
-    for switch in switch_closed:
+    for switch in range(len(switch_closed)):
         switch_closed[switch] = False
 
     return render_template("home.html")
